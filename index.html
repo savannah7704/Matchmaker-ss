@@ -15,17 +15,76 @@
 
 <select id = "Q1">
     <option value = "5">Strongly Agree</option>
+    <option value = "4">Agree</option>
+    <option value = "3">Neutral</option>
+    <option value = "2">Disagree</option>
+    <option value = "1">Strongly disagree</option>
 </select>
+
+<label>
+    Final Fantasy VII is the greatest game of all time!
+</label>
+<br>
+
+
+<select id = "Q2">
+    <option value = "5">Strongly Agree</option>
+    <option value = "4">Agree</option>
+    <option value = "3">Neutral</option>
+    <option value = "2">Disagree</option>
+    <option value = "1">Strongly disagree</option>
+</select>
+
+<label>
+    Coffee is better than tea!
+</label>
+<br>
+
+
+<select id = "Q3">
+    <option value = "5">Strongly Agree</option>
+    <option value = "4">Agree</option>
+    <option value = "3">Neutral</option>
+    <option value = "2">Disagree</option>
+    <option value = "1">Strongly disagree</option>
+</select>
+
 
 <button onclick= "calculateLove()">
     Calculate love
 </button>
 
+<br><br>
+
+<p id = "score">
+    score here
+</p>
+
 <script>
-    console.log("Starting")
+    console.log("Starting");
 
     function calculateLove() {
-        console.log("Calculating love")
+        const preferredAnswers = [5, 5, 2];
+        console.log("Calculating love");
+        const userAnswers = [];
+        userAnswers.push(document.getElementById("Q1").selectedOptions[0].value);
+        userAnswers.push(document.getElementById("Q2").selectedOptions[0].value);
+        userAnswers.push(document.getElementById("Q3").selectedOptions[0].value);
+
+        console.log(userAnswers)
+
+        let totalCompatibility = 0
+
+        for (let i = 0; i < cars.length; i++) {
+            const userAnswersInt = parseInt(userAnswers[i]);
+           
+            let questionCompatibility = 5 - Math.abs(userAnswersInt - preferredAnswers[1]);
+    
+            totalCompatibility += questionCompatibility;
+
+            document.getElementById("score").innerHTML = "Your compatibility is: " + totalCompatibility;
+
+        }
     }
 </script>
 
