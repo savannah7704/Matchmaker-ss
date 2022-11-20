@@ -52,6 +52,37 @@
 </select>
 <br><br><br>
 
+<label>
+    Playstation is better than Xbox!
+</label>
+<br><br><br>
+
+
+<select id = "Q4">
+    <option value = "5">Strongly Agree</option>
+    <option value = "4">Agree</option>
+    <option value = "3">Neutral</option>
+    <option value = "2">Disagree</option>
+    <option value = "1">Strongly disagree</option>
+</select>
+<br><br><br>
+
+
+<label>
+    Red is the prettiest color!
+</label>
+<br><br><br>
+
+
+<select id = "Q5">
+    <option value = "5">Strongly Agree</option>
+    <option value = "4">Agree</option>
+    <option value = "3">Neutral</option>
+    <option value = "2">Disagree</option>
+    <option value = "1">Strongly disagree</option>
+</select>
+<br><br><br>
+
 
 <button onclick= "calculateLove()">
     Calculate love
@@ -60,14 +91,14 @@
 <br><br><br>
 
 <p id = "score">
-    score here
+    totalCompatibility
 </p>
 
 <script>
     console.log("Starting");
 
     function calculateLove() {
-        const preferredAnswers = [5, 5, 2];
+        const preferredAnswers = [5, 5, 2, 5, 4];
         console.log("Calculating love");
         const userAnswers = [];
         userAnswers.push(document.getElementById("Q1").selectedOptions[0].value);
