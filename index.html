@@ -90,9 +90,7 @@
 
 <br><br><br>
 
-<p id = "score">
-   
-</p>
+<p id = "score"></p>
 
 <script>
     console.log("Starting");
@@ -117,6 +115,8 @@
             totalCompatibility += questionCompatibility;
 
             document.getElementById("score").innerHTML = "Your compatibility is: " + totalCompatibility;
+
+            console.log("totalCompatibility=" + totalCompatibility);
 
         }
     }
