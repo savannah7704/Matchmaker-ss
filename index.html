@@ -83,6 +83,13 @@
 <button onclick="calculateCompatibility()">Calculate Compatibility</button>
     <p id="compatibility"></p>
 
+    <p id="You are my true love! We're meant to be!"></p>
+    <p id="I feel a spark between us! I think we have a chance."></p>
+    <p id="I think we're better off as friends."></p>
+    <p id="I'm sure you're very nice, but we don't seem compatible."></p>
+    <p id="This isn't gonna work..."></p>
+    <p id="We aren't compatible at all, not even as friends. We should go our separate ways. Sorry."><</p>
+
 <script>
 
     function calculateCompatibility() {
@@ -118,17 +125,17 @@
         document.getElementById("compatibility").innerHTML = "Your compatibility is: " + totalCompatibility + "💕";
 
         if (totalCompatibility >= 90) {
-            document.write("You are my true love! We're meant to be!");
+            document.getElementById("You are my true love! We're meant to be!").innerHTML;
           } else if (totalCompatibility >= 80) {
-            document.write("I feel a spark between us! I think we have a chance.")
+            document.getElementById("I feel a spark between us! I think we have a chance.").innerHTML;
           } else if (totalCompatibility >= 70) {
-            document.write("I think we're better off as friends.")
+            document.getElementById("I think we're better off as friends.").innerHTML;
           } else if (totalCompatibility >= 60) {
-            document.write("I'm sure you're very nice, but we don't seem compatible.")
+            document.getElementById("I'm sure you're very nice, but we don't seem compatible.").innerHTML;
           } else if (totalCompatibility >= 50) {
-            document.write("This isn't gonna work...")
-          } else if (totalCompatibility < 40) {
-            document.write("We aren't compatible as all, not even as friends. We should go our separate ways. Sorry.")
+            document.getElementById("This isn't gonna work...").innerHTML;
+          } else if (totalCompatibility < 50) {
+            document.getElementById("We aren't compatible at all, not even as friends. We should go our separate ways. Sorry.").innerHTML;
           }
 
         }
