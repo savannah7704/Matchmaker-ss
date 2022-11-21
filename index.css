@@ -7,7 +7,7 @@ label {
 }
 
 select {
-    display: block;
+    display: inline-block;
     width: 1536px;
     text-align: center;
     }
