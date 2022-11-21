@@ -83,46 +83,85 @@
 </select>
 <br><br><br>
 
+<button onclick="calculateCompatibility()">Calculate Compatibility</button>
+    <p id="compatibility"></p>
 
-<button onclick= "calculateLove()">
+
+<!--<button onclick= "calculateLove()">
     Calculate love
 </button>
 
 <br><br><br><br><br>
 
-<p id = "score"></p>
+<p id = "score"></p>-->
 
 <script>
-    console.log("Starting");
 
-    function calculateLove() {
-        const preferredAnswers = [5, 5, 2, 5, 4];
-        console.log("Calculating love");
-        const userAnswers = [];
-        userAnswers.push(document.getElementById("Q1").selectedOptions[0].value);
-        userAnswers.push(document.getElementById("Q2").selectedOptions[0].value);
-        userAnswers.push(document.getElementById("Q3").selectedOptions[0].value);
+    function calculateCompatibility() {
 
-        console.log(userAnswers)
+        const PREFERRED_ANSWERS = [
+            4,
+            5,
+            2,
+            5,
+            4
+        ]
 
-        let totalCompatibility = 0
+        const HIGHEST_SCORE = 25;
 
-        for (let i = 0; i < totalCompatibility.length; i++) {
-            const userAnswersInt = parseInt(userAnswers[i]);
-           
-            let questionCompatibility = 5 - Math.abs(userAnswersInt - preferredAnswers[1]);
+        let question1Response = document.getElementById('Q1').selectedOptions[0].value;
+        let question2Response = document.getElementById('Q2').selectedOptions[0].value;
+        let question3Response = document.getElementById('Q3').selectedOptions[0].value;
+        let question4Response = document.getElementById('Q4').selectedOptions[0].value;
+        let question5Response = document.getElementById('Q5').selectedOptions[0].value;
+
+
+        let question1Compatibility = 5 - Math.abs(question1Response - DESIRED_RESPONSE[0])
+        let question2Compatibility = 5 - Math.abs(question2Response - DESIRED_RESPONSE[1])
+        let question3Compatibility = 5 - Math.abs(question3Response - DESIRED_RESPONSE[2])
+        let question4Compatibility = 5 - Math.abs(question3Response - DESIRED_RESPONSE[3])
+        let question5Compatibility = 5 - Math.abs(question3Response - DESIRED_RESPONSE[4])
+
+        let totalCompatibility = question1Compatibility + question2Compatibility + question3Compatibility + question4Compatibility + question5Compatibility;
+
+        totalCompatibility *= 100 / HIGHEST_SCORE;
+        totalCompatibility = Math.round(totalCompatibility);
+
+        document.getElementById("compatibility").innerHTML = "Your compatibility is:" + totalCompatibility;
     
-            totalCompatibility += questionCompatibility;
+    
 
 
-            document.getElementById("score").innerHTML = "Your compatibility is: " + totalCompatibility;
+    //console.log("Starting");
+
+    //function calculateLove() {
+       // const preferredAnswers = [5, 5, 2, 5, 4];
+       // console.log("Calculating love");
+      //  const userAnswers = [];
+       // userAnswers.push(document.getElementById("Q1").selectedOptions[0].value);
+      //  userAnswers.push(document.getElementById("Q2").selectedOptions[0].value);
+       // userAnswers.push(document.getElementById("Q3").selectedOptions[0].value);
+
+        //console.log(userAnswers)
+
+       // let totalCompatibility = 0
+
+        //for (let i = 0; i < totalCompatibility.length; i++) {
+          //  const userAnswersInt = parseInt(userAnswers[i]);
+           
+            //let questionCompatibility = 5 - Math.abs(userAnswersInt - preferredAnswers[1]);
+    
+            //totalCompatibility += questionCompatibility;
+
+
+            //document.getElementById("score").innerHTML = "Your compatibility is: " + totalCompatibility;
 
 
 
-            console.log("totalCompatibility=" + totalCompatibility);
+            //console.log("totalCompatibility=" + totalCompatibility);
 
         }
-    }
+    
 </script>
 
 </body>
