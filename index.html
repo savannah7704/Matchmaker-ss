@@ -10,13 +10,10 @@
 <h1 style = "text-align: center">♥♥♥ Matchmaker ♥♥♥</h1>
 <p style = "text-align: center">♥ Find your true love! ♥</p>
 
-
-
 <label>
     Cheesecake is awesome!
 </label>
 <br><br>
-
 
 <select id = "Q1">
     <option value = "5">Strongly Agree</option>
@@ -32,7 +29,6 @@
 </label>
 <br><br>
 
-
 <select id = "Q2">
     <option value = "5">Strongly Agree</option>
     <option value = "4">Agree</option>
@@ -46,7 +42,6 @@
     Coffee is better than tea!
 </label>
 <br><br>
-
 
 <select id = "Q3">
     <option value = "5">Strongly Agree</option>
@@ -62,7 +57,6 @@
 </label>
 <br><br>
 
-
 <select id = "Q4">
     <option value = "5">Strongly Agree</option>
     <option value = "4">Agree</option>
@@ -72,12 +66,10 @@
 </select>
 <br><br><br>
 
-
 <label>
     Red is the prettiest color!
 </label>
 <br><br>
-
 
 <select id = "Q5">
     <option value = "5">Strongly Agree</option>
@@ -90,15 +82,6 @@
 
 <button onclick="calculateCompatibility()">Calculate Compatibility</button>
     <p id="compatibility"></p>
-
-
-<!--<button onclick= "calculateLove()">
-    Calculate love
-</button>
-
-<br><br><br><br><br>
-
-<p id = "score"></p>-->
 
 <script>
 
@@ -133,37 +116,20 @@
         totalCompatibility = Math.round(totalCompatibility);
 
         document.getElementById("compatibility").innerHTML = "Your compatibility is: " + totalCompatibility + "💕";
-    
-    
 
-
-    //console.log("Starting");
-
-    //function calculateLove() {
-       // const preferredAnswers = [5, 5, 2, 5, 4];
-       // console.log("Calculating love");
-      //  const userAnswers = [];
-       // userAnswers.push(document.getElementById("Q1").selectedOptions[0].value);
-      //  userAnswers.push(document.getElementById("Q2").selectedOptions[0].value);
-       // userAnswers.push(document.getElementById("Q3").selectedOptions[0].value);
-
-        //console.log(userAnswers)
-
-       // let totalCompatibility = 0
-
-        //for (let i = 0; i < totalCompatibility.length; i++) {
-          //  const userAnswersInt = parseInt(userAnswers[i]);
-           
-            //let questionCompatibility = 5 - Math.abs(userAnswersInt - preferredAnswers[1]);
-    
-            //totalCompatibility += questionCompatibility;
-
-
-            //document.getElementById("score").innerHTML = "Your compatibility is: " + totalCompatibility;
-
-
-
-            //console.log("totalCompatibility=" + totalCompatibility);
+        if (totalCompatibility >= 90) {
+            "You are my true love! We're meant to be!"
+          } else if (totalCompatibility >= 80) {
+            "I feel a spark between us! I think we have a chance."
+          } else if (totalCompatibility >= 70) {
+            "I think we're better off as friends."
+          } else if (totalCompatibility >= 60) {
+            "I'm sure you're very nice, but we don't seem compatible."
+          } else if (totalCompatibility >= 50) {
+            "This isn't gonna work..."
+          } else if (totalCompatibility < 40) {
+            "We aren't compatible as all, not even as friends. We should go our separate ways. Sorry."
+          }
 
         }
     

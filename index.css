@@ -1,13 +1,12 @@
 body {color:#d7007e; }
 
 label {
-    display: inline-block;
+    display: block;
     width: 1536px;
     text-align: center;
 }
 
 select {
     display: inline-block;
-    width: 1536px;
     text-align: center;
     }
