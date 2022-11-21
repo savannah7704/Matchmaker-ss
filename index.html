@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <h1 style = "text-align: center">♥♥♥ Matchmaker ♥♥♥</h1>
 <p style = "text-align: center">♥ Find your true love! ♥</p>
+<p style = "text-align: center">"Hello! Welcome to Matchmaker. Pick a response from the dropdown menu for each question that reflects your feelings. Your choices will determine our compatibility."</p>
 
 <label>
     Cheesecake is awesome!
@@ -111,7 +112,6 @@
         let question4Response = document.getElementById('Q4').selectedOptions[0].value;
         let question5Response = document.getElementById('Q5').selectedOptions[0].value;
 
-
         let question1Compatibility = 5 - Math.abs(question1Response - PREFERRED_ANSWERS[0]);
         let question2Compatibility = 5 - Math.abs(question2Response - PREFERRED_ANSWERS[1]);
         let question3Compatibility = 5 - Math.abs(question3Response - PREFERRED_ANSWERS[2]);
@@ -138,10 +138,8 @@
           } else if (totalCompatibility < 50) {
             document.getElementById("output6").innerHTML = "We aren't compatible as all, not even as friends. We should go our separate ways. Sorry.";
           }
-
         }
     
 </script>
-
 </body>
 </html>
