@@ -83,16 +83,17 @@
 <button onclick="calculateCompatibility()">Calculate Compatibility</button>
     <p id="compatibility"></p>
 
-    <p id="You are my true love! We're meant to be!">You are my true love! We're meant to be</p>
-    <p id="I feel a spark between us! I think we have a chance.">I feel a spark between us! I think we have a chance.</p>
-    <p id="I think we're better off as friends.">I think we're better off as friends.</p>
-    <p id="I'm sure you're very nice, but we don't seem compatible.">I'm sure you're very nice, but we don't seem compatible.</p>
-    <p id="This isn't gonna work...">This isn't gonna work...</p>
-    <p id="We aren't compatible at all, not even as friends. We should go our separate ways. Sorry.">We aren't compatible at all, not even as friends. We should go our separate ways. Sorry.</p>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <p id="output4"></p>
+    <p id="output5"></p>
+    <p id="output6"></p>
 
 <script>
 
     function calculateCompatibility() {
+       
 
         const PREFERRED_ANSWERS = [
             4,
@@ -125,17 +126,17 @@
         document.getElementById("compatibility").innerHTML = "Your compatibility is: " + totalCompatibility + "💕";
 
         if (totalCompatibility >= 90) {
-            document.getElementById("You are my true love! We're meant to be!").innerHTML;
+            document.getElementById("output1").innerHTML = "You are my true love! We're meant to be!";
           } else if (totalCompatibility >= 80) {
-            document.getElementById("I feel a spark between us! I think we have a chance.").innerHTML;
+            document.getElementById("output2").innerHTML = "I feel a spark between us! I think we have a chance.";
           } else if (totalCompatibility >= 70) {
-            document.getElementById("I think we're better off as friends.").innerHTML;
+            document.getElementById("output3").innerHTML = "I think we're better off as friends.";
           } else if (totalCompatibility >= 60) {
-            document.getElementById("I'm sure you're very nice, but we don't seem compatible.").innerHTML;
+            document.getElementById("output4").innerHTML = "I'm sure you're very nice, but we don't seem compatible."
           } else if (totalCompatibility >= 50) {
-            document.getElementById("This isn't gonna work...").innerHTML;
+            document.getElementById("output5").innerHTML = "This isn't gonna work..."
           } else if (totalCompatibility < 50) {
-            document.getElementById("We aren't compatible at all, not even as friends. We should go our separate ways. Sorry.").innerHTML;
+            document.getElementById("output6").innerHTML = "We aren't compatible as all, not even as friends. We should go our separate ways. Sorry.";
           }
 
         }
