@@ -2,6 +2,12 @@ body {color:#d7007e; }
 
 label {
     display: inline-block;
-    width: 768px;
+    width: 1536px;
     text-align: center;
 }
+
+select {
+    display: block;
+    width: 1536px;
+    text-align: center;
+    }
